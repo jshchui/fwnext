@@ -4,17 +4,18 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "harp": "^0.23.0"
+    "harp": "^0.23.0",
+    "livereload": "^0.6.2"
   },
   "devDependencies": {
     "browser-sync": "^2.18.8",
-    "livereloadx": "^0.3.9",
     "npm-run-all": "^4.0.2"
   },
   "scripts": {
     "start": "npm-run-all --parallel server livereload",
     "server": "harp server fanswifi --port 9000",
-    "livereload": "livereloadx --include '*.{ejs,scss,html,md}' --proxy http://localhost:9000 fanswifi"
+    "livereload": "livereload fanswifi -d -e 'ejs,scss,html,md' -u true",
+    "build": "harp compile ./fanswifi ./www"
   },
   "author": "",
   "license": "ISC"
