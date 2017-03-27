@@ -8,8 +8,11 @@ body{
 }
 
 body {
-  background: #fff;
+  background: #FFF;
+  padding:0;
+  margin: 0;
 }
+
 
 h1{
   font-size: 65px;
@@ -20,4 +23,38 @@ h1{
 
 h3{
   font-weight: 300;
+}
+
+.float-right {
+  float: right;
+}
+
+.nav-bar {
+  margin:0;
+  overflow: auto;
+
+  background-color: #000;
+
+  ul {
+    list-style-type: none;
+    li {
+      float: left;
+      margin: 0 1em 0 1em;
+      a {
+          font-family:'Montserrat', sans-serif;
+          color: #FFF;
+          text-decoration:none;
+      }
+    }
+  }
+
+
+  .logo {
+    margin: 1em;
+    width: 50px;
+    height: 50px;
+    float:left;
+
+    background-color: #FFF;
+  }
 }
