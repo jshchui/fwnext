@@ -14,7 +14,7 @@
   "scripts": {
     "start": "npm-run-all --parallel server livereload",
     "server": "harp server fanswifi --port 9000",
-    "livereload": "livereloadx --include ./fanswifi/*.scss --proxy http://localhost:9000 fanswifi"
+    "livereload": "livereloadx --include '*.{ejs,scss,html,md}' --proxy http://localhost:9000 fanswifi"
   },
   "author": "",
   "license": "ISC"
