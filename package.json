@@ -1,0 +1,21 @@
+{
+  "name": "site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "harp": "^0.23.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "livereloadx": "^0.3.9",
+    "npm-run-all": "^4.0.2"
+  },
+  "scripts": {
+    "start": "npm-run-all --parallel server livereload",
+    "server": "harp server fanswifi --port 9000",
+    "livereload": "livereloadx --include ./fanswifi/*.scss --proxy http://localhost:9000 fanswifi"
+  },
+  "author": "",
+  "license": "ISC"
+}
