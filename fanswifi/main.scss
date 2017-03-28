@@ -79,8 +79,8 @@ h4{
 .row {
   display:flex;
   transition: 0.5s all;
-  margin: 0 auto;
-  flex: 1 1 0;
+  //margin: 0 auto;
+  //flex: 1 1 0;
   //width: 100%;
 }
 
@@ -121,49 +121,65 @@ h4{
 }
 
 .small-icon {
-  margin:1.5em;
+  margin:1.0em;
+  img {
+    width: auto !important; //need to do something about this
+  }
+}
+
+.dual-point {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 1em;
+  margin:0 auto;
+  img {
+    width: 100%;
+  }
 }
 
 .quad-point{
-  flex: 1 1 0;
+  width: 25%;
   padding: 1em;
+  box-sizing: border-box;
   img {
     width: 100%;
   }
 }
 
 .tri-point {
-  //display:flex;
-  //flex-direction:column;
-  display: inline-block;
+  width: 33%;
+  box-sizing: border-box;
   padding:1em;
-  flex: 1 1 0; //makes items inside flex the same saize
-
-  //width:33%;
-
+  margin:0 auto;
   img {
     width:100%;
   }
 }
 
-.dual-point {
+.big-image {
+  box-sizing: border-box;
+  //
+  img {
+    max-width: 100%
+  }
+}
+
+.horizontal-dual-point {
   align-items: center;
   display: flex;
   flex: 1 1 0;
 }
 
 .hex-point {
-  display: inline-block;
+  width:16%;
+  box-sizing: border-box;
   padding:1em;
-  flex: 1 1 0;
+
+  margin: 0 auto;
 
   img {
     width: 100%;
   }
-}
-
-.responsive {
-
 }
 
 
@@ -199,12 +215,35 @@ h4{
 
 @media(max-width: 800px) {
   .row{
-    flex-direction: column;
+    flex-wrap: wrap;
+    //flex-direction: column;
+  }
+
+  .dual-point {
+    width: 100%;
+  }
+
+  .tri-point {
+    width: 50%;
+  }
+
+  .quad-point {
+    width: 50%;
+  }
+
+  .hex-point {
+    width: 33%;
+    padding:0.5em;
   }
 
 }
 
 @media(max-width: 500px) {
+
+  .horizontal-dual-point{
+    flex:none;
+  }
+
   .nav-container {
     flex-direction: column;
   }
