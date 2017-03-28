@@ -25,6 +25,10 @@ h3{
   font-weight: 300;
 }
 
+h4{
+
+}
+
 .nav-content {
   display:flex;
   margin-left: auto;
@@ -63,6 +67,7 @@ h3{
 
 .slide {
   //overflow:auto;
+  padding: 5em 3em;
 }
 
 #first-screen{
@@ -73,6 +78,8 @@ h3{
 
 .row {
   display:flex;
+  transition: 0.5s all;
+  //width: 100%;
 }
 
 .center-content {
@@ -81,16 +88,24 @@ h3{
   width: 100%;
 }
 
+.content {
+  text-align:left;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
 .customer-list {
   background-color: grey;
-  padding: 0.5em;
+  //padding: 0.5em;
   display:flex;
   justify-content: space-around;
   align-items:flex-end;
   margin-top: auto;
 }
 .customers {
-  padding: 0.5em 0.5em;
+  padding: 1em 0.5em;
   display: inline-block;
   display:flex;
   img {
@@ -99,22 +114,51 @@ h3{
   }
 }
 
+.small-icon {
+  margin:1.5em;
+}
+
 .quad-point{
   display: inline-block;
-  width: 24%;
+  padding: 1em;
+  flex: 1 1 0;
+
+  img {
+    width: 100%;
+  }
 }
 
 .tri-point {
+  //display:flex;
+  //flex-direction:column;
   display: inline-block;
-  width:33%;
+  padding:1em;
+  flex: 1 1 0; //makes items inside flex the same saize
+
+  //width:33%;
+
+  img {
+    width:100%;
+  }
 }
 
 .dual-point {
-  display: inline-block;
-  width:49%;
+  display: flex;
 }
 
 .hex-point {
   display: inline-block;
-  width:16%;
+  padding:1em;
+  flex: 1 1 0;
+
+  img {
+    width: 100%;
+  }
+}
+
+
+@media(max-width: 800px) {
+  .row{
+    flex-direction: column;
+  }
 }
