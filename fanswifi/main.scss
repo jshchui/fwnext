@@ -79,6 +79,8 @@ h4{
 .row {
   display:flex;
   transition: 0.5s all;
+  margin: 0 auto;
+  flex: 1 1 0;
   //width: 100%;
 }
 
@@ -86,6 +88,10 @@ h4{
   margin-top: auto;
   flex-direction:column;
   width: 100%;
+}
+
+.right-content {
+  margin-left: 3em;
 }
 
 .content {
@@ -119,10 +125,8 @@ h4{
 }
 
 .quad-point{
-  display: inline-block;
-  padding: 1em;
   flex: 1 1 0;
-
+  padding: 1em;
   img {
     width: 100%;
   }
@@ -143,7 +147,9 @@ h4{
 }
 
 .dual-point {
+  align-items: center;
   display: flex;
+  flex: 1 1 0;
 }
 
 .hex-point {
@@ -156,9 +162,55 @@ h4{
   }
 }
 
+.responsive {
+
+}
+
+
+.bot-nav {
+  background-color: #000;
+  //height: 300px;
+  display: flex;
+  overflow:hidden;
+
+  color:white;
+  text-align:left;
+  p {
+    margin:0.5em auto;
+  }
+
+  .nav-container {
+    width: 1200px;
+    margin: 0 auto;
+    display:flex;
+  }
+
+  .botnav-content {
+    margin: 1em;
+    flex-grow: 1;
+  }
+  .botnav-logo {
+    flex-grow: 3;
+    text-align:right;
+    margin: 2em;
+  }
+}
+
 
 @media(max-width: 800px) {
   .row{
     flex-direction: column;
+  }
+
+}
+
+@media(max-width: 500px) {
+  .nav-container {
+    flex-direction: column;
+  }
+
+  .bot-nav .botnav-logo {
+    text-align:left;
+    margin:1em;
   }
 }
