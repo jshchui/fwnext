@@ -13,33 +13,34 @@ body {
   margin: 0;
 }
 
-
-h1{
-  font-size: 65px;
-  line-height: 1.2em;
-  border-bottom: #CCC solid 1px;
-  padding: 20px 0;
+h1 {
+  font-size: 3em; //48px
+  margin:0;
+  font-family:'Montserrat', sans-serif;
 }
 
 h3{
+  font-size: 1.5em; //24px
+  font-family:'Montserrat', sans-serif;
   font-weight: 300;
 }
 
-.float-right {
-  float: right;
+.nav-content {
+  display:flex;
+  margin-left: auto;
 }
 
 .nav-bar {
   margin:0;
-  overflow: auto;
+  overflow: hidden;
+  max-height: 65px;
 
   background-color: #000;
-
   ul {
     list-style-type: none;
     li {
       float: left;
-      margin: 0 1em 0 1em;
+      margin: 0.5em 1.5em;
       a {
           font-family:'Montserrat', sans-serif;
           color: #FFF;
@@ -47,14 +48,73 @@ h3{
       }
     }
   }
-
-
   .logo {
     margin: 1em;
-    width: 50px;
-    height: 50px;
-    float:left;
-
-    background-color: #FFF;
+    //float:left;
   }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+
+}
+
+.slide {
+  //overflow:auto;
+}
+
+#first-screen{
+  height: calc(100vh - 65px);
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display:flex;
+}
+
+.center-content {
+  margin-top: auto;
+  flex-direction:column;
+  width: 100%;
+}
+
+.customer-list {
+  background-color: grey;
+  padding: 0.5em;
+  display:flex;
+  justify-content: space-around;
+  align-items:flex-end;
+  margin-top: auto;
+}
+.customers {
+  padding: 0.5em 0.5em;
+  display: inline-block;
+  display:flex;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.quad-point{
+  display: inline-block;
+  width: 24%;
+}
+
+.tri-point {
+  display: inline-block;
+  width:33%;
+}
+
+.dual-point {
+  display: inline-block;
+  width:49%;
+}
+
+.hex-point {
+  display: inline-block;
+  width:16%;
 }
