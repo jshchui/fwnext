@@ -13,17 +13,25 @@ h1 {
   font-size: 3em; //48px
   margin:0;
   font-family:'Montserrat', sans-serif;
+  color: #FFF;
 }
 
 h3{
   font-size: 1.5em; //24px
   font-family:'Montserrat', sans-serif;
   font-weight: 300;
+  color: #FFF;
 }
 
 .nav-bar {
   height: 65px;
-  background-color: #000;
+  //background-color: #000;
+
+  position: fixed;
+  width: 100%;
+
+
+
   ul {
     list-style-type: none;
     float:right;
@@ -38,12 +46,6 @@ h3{
     }
   }
 
-  // .nav-max-width {
-  //   max-width: 1200px;
-  //   margin: 0 auto;
-  //   overflow:auto;
-  // }
-
   .logo {
     max-width:9.3em;
     margin-top: 0.7em;
@@ -51,11 +53,6 @@ h3{
     img {
       width: 100%;
     }
-  }
-
-  .nav-content {
-    //display:flex;
-    //margin-left: auto;
   }
 }
 
@@ -78,25 +75,28 @@ h3{
   overflow:auto;
   img {
     width: 100%;
-    //padding: 0 1em;
   }
 }
 
 #first-screen{
-  height: calc(100vh - 65px);
+  //height: calc(100vh - 65px);
+
+  height: 100vh;
   display: flex;
   flex-direction: column;
+
+  background-image: url("img/index_page.jpg");
 }
 
-// .center-content {
-//   margin-top: auto;
-//   flex-direction:column;
-//   width: 100%;
-// }
-//
-// .left-content {
-//   text-align:left;
-// }
+.first-slide-content-align {
+  padding-top:5em;
+  margin-top: auto;
+}
+
+.top-screen{
+  display:flex;
+  height:40vh;
+}
 
 .flex{
   display: flex !important;
@@ -108,14 +108,14 @@ h3{
 }
 
 .customer-list {
-  background-color: grey;
+  background-color: rgba(31, 31, 31, 0.82);
   margin-top: auto;
 
 }
 .customers {
-  padding: 1em 0.5em;
-  display: inline-block;
-  display:flex;
+  //padding: 1em 0.5em;
+  padding:1em;
+
   img {
     width: 100%;
     height: auto;
@@ -125,9 +125,6 @@ h3{
 
 .bot-nav {
   background-color: #000;
-  //height: 300px;
-  display: flex;
-  overflow:hidden;
 
   color:white;
   text-align:left;
@@ -135,20 +132,9 @@ h3{
     margin:0.5em auto;
   }
 
-  .nav-container {
-    width: 1200px;
-    margin: 0 auto;
-    display:flex;
-  }
-
-  .botnav-content {
-    margin: 1em;
-    flex-grow: 1;
-  }
   .botnav-logo {
-    flex-grow: 3;
-    text-align:right;
-    margin: 2em;
+    float:right;
+    margin: 1em
   }
 }
 
@@ -159,7 +145,7 @@ h3{
   }
 
   .bot-nav .botnav-logo {
-    text-align:left;
-    margin:1em;
+    float: none;
+    margin: 0;
   }
 }
