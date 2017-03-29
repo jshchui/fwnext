@@ -9,6 +9,8 @@ body{
   margin: 0;
 }
 
+
+
 body {
   background: #FFF;
   padding:0;
@@ -27,8 +29,8 @@ h3{
   font-weight: 300;
 }
 
-h4{
-
+p {
+  margin: 0 1em;
 }
 
 .nav-content {
@@ -64,7 +66,7 @@ h4{
   }
 }
 
-.container {
+.container-1 {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
@@ -72,8 +74,15 @@ h4{
 }
 
 .slide {
-  //overflow:auto;
-  padding: 5em 3em;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3em;
+  box-sizing: border-box;
+  overflow:auto;
+  img {
+    width: 100%;
+    padding: 1.5em;
+  }
 }
 
 #first-screen{
@@ -82,31 +91,40 @@ h4{
   flex-direction: column;
 }
 
-.row {
-  display:flex;
-  transition: 0.5s all;
-  //margin: 0 auto;
-  //flex: 1 1 0;
-  //width: 100%;
-}
+// .row-1 {
+//   display:flex;
+//   transition: 0.5s all;
+//   //margin: 0 auto;
+//   //flex: 1 1 0;
+//   //width: 100%;
+// }
 
 .center-content {
   margin-top: auto;
   flex-direction:column;
   width: 100%;
 }
+//
+// .right-content {
+//   margin-left: 3em;
+// }
 
-.right-content {
-  margin-left: 3em;
-}
-
-.content {
+.left-content {
   text-align:left;
 }
 
-.wrap {
-  flex-wrap: wrap;
+.flex{
+  display: flex !important;
 }
+
+.vert-align-flex {
+  display:flex !important;
+  align-items:center;
+}
+//
+// .wrap {
+//   flex-wrap: wrap;
+// }
 
 .customer-list {
   background-color: grey;
@@ -126,67 +144,64 @@ h4{
   }
 }
 
-.small-icon {
-  margin:1.0em;
-  img {
-    width: auto !important; //need to do something about this
-  }
+.small-icon-left {
+  float: left;
 }
+//
+// .dual-point {
+//   width: 50%;
+//   box-sizing: border-box;
+//   padding: 1em;
+//   margin:0 auto;
+//   img {
+//     width: 100%;
+//   }
+// }
+//
+// .quad-point{
+//   width: 25%;
+//   padding: 1em;
+//   box-sizing: border-box;
+//   img {
+//     width: 100%;
+//   }
+// }
+//
+// .tri-point {
+//   width: 33%;
+//   box-sizing: border-box;
+//   padding:1em;
+//   margin:0 auto;
+//   img {
+//     width:100%;
+//   }
+// }
+//
+// .big-image {
+//   box-sizing: border-box;
+//   //
+//   img {
+//     max-width: 100%
+//   }
+// }
 
-.dual-point {
-  width: 50%;
-  box-sizing: border-box;
-  padding: 1em;
-  margin:0 auto;
-  img {
-    width: 100%;
-  }
-}
+// .horizontal-dual-point {
+//   align-items: center;
+//   display: flex;
+//   flex: 1 1 0;
+// }
 
-.quad-point{
-  width: 25%;
-  padding: 1em;
-  box-sizing: border-box;
-  img {
-    width: 100%;
-  }
-}
-
-.tri-point {
-  width: 33%;
-  box-sizing: border-box;
-  padding:1em;
-  margin:0 auto;
-  img {
-    width:100%;
-  }
-}
-
-.big-image {
-  box-sizing: border-box;
-  //
-  img {
-    max-width: 100%
-  }
-}
-
-.horizontal-dual-point {
-  align-items: center;
-  display: flex;
-  flex: 1 1 0;
-}
-
-.hex-point {
-  width:16%;
-  box-sizing: border-box;
-  padding:1em;
-
-  margin: 0 auto;
-
-  img {
-    width: 100%;
-  }
-}
+// .hex-point {
+//   width:16%;
+//   box-sizing: border-box;
+//   padding:1em;
+//
+//   margin: 0 auto;
+//
+//   img {
+//     width: 100%;
+//   }
+// }
 
 
 .bot-nav {
@@ -220,35 +235,35 @@ h4{
 
 
 @media(max-width: 800px) {
-  .row{
-    flex-wrap: wrap;
-    //flex-direction: column;
+
+  p {
+    margin: 0;
   }
 
-  .dual-point {
-    width: 100%;
-  }
-
-  .tri-point {
-    width: 50%;
-  }
-
-  .quad-point {
-    width: 50%;
-  }
-
-  .hex-point {
-    width: 33%;
-    padding:0.5em;
-  }
+  // .dual-point {
+  //   width: 100%;
+  // }
+  //
+  // .tri-point {
+  //   width: 50%;
+  // }
+  //
+  // .quad-point {
+  //   width: 50%;
+  // }
+  //
+  // .hex-point {
+  //   width: 33%;
+  //   padding:0.5em;
+  // }
 
 }
 
 @media(max-width: 500px) {
 
-  .horizontal-dual-point{
-    flex:none;
-  }
+  // .horizontal-dual-point{
+  //   flex:none;
+  // }
 
   .nav-container {
     flex-direction: column;
