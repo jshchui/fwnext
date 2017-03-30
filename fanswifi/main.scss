@@ -16,6 +16,13 @@ h1 {
   color: #FFF;
 }
 
+h2 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Montserrat', sans-serif;
+  color: #F2631E;
+}
+
 h3{
   font-size: 1.5em; //24px
   font-family:'Montserrat', sans-serif;
@@ -23,11 +30,14 @@ h3{
   color: #FFF;
 }
 
+h4 {
+  //color: #F2631E;
+}
+
 p {
   font-size: 1em;
   font-family: 'Lato', sans-serif;
 }
-
 #nav-bar {
   height: 60px;
   transition: all 0.4s ease;
@@ -129,6 +139,7 @@ p {
   }
 }
 
+
 #first-screen{
   //height: calc(100vh - 65px);
 
@@ -151,6 +162,27 @@ p {
   //background-color: #efefef;
   color: #FFF;
   background-image: url("img/audience/audience.jpg")
+}
+
+#partner {
+  background-color:lightgrey;
+
+  .button {
+    padding: 1em 3em;
+    border-radius: 1em;
+    //border-style: solid;
+    //border-color: #F2631E;
+    background-color: #F2631E;
+    text-decoration: none;
+    color: #FFF;
+    display: inline-block;
+
+    h3 {
+      margin:0;
+    }
+  }
+
+
 }
 
 .award {
@@ -197,7 +229,8 @@ p {
 
 
 .bot-nav {
-  background-color: #000;
+  //background-color: #BF2718;
+  background-color: #F2631E;
 
   color:white;
   text-align:left;
@@ -211,6 +244,12 @@ p {
 
     img {
       max-width: 8em;
+    }
+  }
+
+  .social {
+    img {
+      max-width: 50px;
     }
   }
 }
