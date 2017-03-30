@@ -23,21 +23,26 @@ h3{
   color: #FFF;
 }
 
+p {
+  font-size: 1em;
+  font-family: 'Lato', sans-serif;
+}
+
 .nav-bar {
   height: 65px;
   //background-color: #000;
 
   position: fixed;
   width: 100%;
-
-
+  z-index: 1;
 
   ul {
     list-style-type: none;
     float:right;
     li {
       float: left;
-      margin: 0.5em 1.5em;
+      padding: 0.5em 1.5em;
+      transition: all 0.4s ease;
       a {
           font-family:'Montserrat', sans-serif;
           color: #FFF;
@@ -46,15 +51,51 @@ h3{
     }
   }
 
+  #nav-content {
+    transition: all 0.5s;
+  }
+
+
   .logo {
-    max-width:9.3em;
+    max-width:8em;
     margin-top: 0.7em;
     float:left;
     img {
       width: 100%;
     }
   }
+
 }
+
+//Hamburger Menu
+.hamburger {
+  display: none;
+  cursor: pointer;
+  padding:0.5em 1em;
+  float:right;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #FFF;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+   transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+
 
 .max-width {
   max-width: 1200px;
@@ -88,6 +129,14 @@ h3{
   background-image: url("img/index_page.jpg");
 }
 
+#intro {
+
+}
+
+#audience {
+  overflow:auto;
+}
+
 .first-slide-content-align {
   padding-top:5em;
   margin-top: auto;
@@ -96,6 +145,7 @@ h3{
 .top-screen{
   display:flex;
   height:40vh;
+  background-image: url("img/top_page.jpg")
 }
 
 .flex{
@@ -138,14 +188,49 @@ h3{
   }
 }
 
+@media(max-width: 750px) {
+  .nav-bar {
+    ul {
+      padding: 0;
+      width: 100%;
+      li {
+        width: 100%;
+        margin: 0;
+        padding:0.5em;
+        box-sizing: border-box;
+      }
+    }
 
-@media(max-width: 500px) {
-  .nav-container {
-    flex-direction: column;
+
+    .change {
+      display: block !important;
+      background-color: #000;
+    }
+
+    #nav-content {
+      display:none;
+    }
+
+
+
+
+    .hamburger {
+      display: inline-block;
+    }
   }
 
   .bot-nav .botnav-logo {
     float: none;
     margin: 0;
   }
+
+}
+
+
+@media(max-width: 500px) {
+  .nav-container {
+    flex-direction: column;
+  }
+
+
 }

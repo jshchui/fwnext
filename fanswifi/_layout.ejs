@@ -5,8 +5,17 @@
     <link rel="stylesheet" href="/main.css">
     <link rel="stylesheet" href="/grid.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet">
     <title></title>
   </head>
+  <script> // add this in js later
+    function myFunction(x) {
+        x.classList.toggle("change");
+
+        document.getElementById('nav-content').classList.toggle("change");
+      }
+
+  </script>
   <body>
 
   <div class="nav-bar">
@@ -17,21 +26,39 @@
         </a>
       </div>
 
+      <div class="click" onclick="myFunction(this)">
+        <div class="hamburger">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
 
-      <ul class="nav-content">
+
+        <ul id="nav-content">
+          <li><a href="/product.html">Product</a></li>
+          <li><a href="/partner.html">Partner</a></li>
+          <li><a href="">Success Stories</a></li>
+          <li><a href="">Resources</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+      </div>
+
+
+      <!-- <ul id="nav-content">
         <li><a href="/product.html">Product</a></li>
         <li><a href="/partner.html">Partner</a></li>
         <li><a href="">Success Stories</a></li>
         <li><a href="">Resources</a></li>
         <li><a href="">Contact</a></li>
-      </ul>
+      </ul> -->
+
     </div>
   </div> <!--Nav Bar -->
     <%- yield %>
 
 
     <div class="bot-nav">
-      <div class="max-width">
+      <div class="max-width container fluid">
         <div class="col md-3 spacing">
           <h4>Phone</h4>
           <p>+852 3709 7525</p>
