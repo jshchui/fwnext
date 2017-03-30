@@ -28,8 +28,9 @@ p {
   font-family: 'Lato', sans-serif;
 }
 
-.nav-bar {
-  height: 65px;
+#nav-bar {
+  height: 60px;
+  transition: all 0.4s ease;
   //background-color: #000;
 
   position: fixed;
@@ -50,22 +51,30 @@ p {
       }
     }
   }
-
+//deletable
   #nav-content {
-    transition: all 0.5s;
+    transition: all 0.4s;
   }
-
-
-  .logo {
+  //==
+.logo {
     max-width:8em;
     margin-top: 0.7em;
+    margin-left: 0.7em;
+    z-index:5;
     float:left;
     img {
       width: 100%;
     }
   }
-
 }
+
+// #nav-bar .change {
+//   background-color: black;
+// }
+
+// .change {
+//   background-color: black;
+// }
 
 //Hamburger Menu
 .hamburger {
@@ -85,15 +94,16 @@ p {
 
 .change .bar1 {
   -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
-    transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-8px, 6px) ;
 }
 
 .change .bar2 {opacity: 0;}
 
 .change .bar3 {
   -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
-   transform: rotate(45deg) translate(-8px, -8px) ;
+   transform: rotate(45deg) translate(-9px, -8px) ;
 }
+//Hamberger menu end
 
 
 
@@ -127,6 +137,9 @@ p {
   flex-direction: column;
 
   background-image: url("img/index_page.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 #intro {
@@ -135,6 +148,16 @@ p {
 
 #audience {
   overflow:auto;
+  //background-color: #efefef;
+  color: #FFF;
+  background-image: url("img/audience/audience.jpg")
+}
+
+.award {
+  padding:1em;
+  img {
+    max-width: 172px;
+  }
 }
 
 .first-slide-content-align {
@@ -184,31 +207,46 @@ p {
 
   .botnav-logo {
     float:right;
-    margin: 1em
+    margin: 1em;
+
+    img {
+      max-width: 8em;
+    }
   }
 }
 
 @media(max-width: 750px) {
-  .nav-bar {
+  h1 {
+    font-size: 2em;
+  }
+  #nav-bar {
+    background-color: rgba(31,31,31,0.82);
+    height: calc(310px - 255px);
     ul {
       padding: 0;
       width: 100%;
       li {
         width: 100%;
         margin: 0;
-        padding:0.5em;
+        padding:1em;
         box-sizing: border-box;
       }
     }
 
 
-    .change {
-      display: block !important;
-      background-color: #000;
+    .change #nav-content{
+      //display: block !important;
+      background-color: rgba(31,31,31,0.82);
+      opacity: 1;
+      transform: scaleY(1);
     }
 
     #nav-content {
-      display:none;
+      //display:none;
+      opacity: 0;
+      transform-origin: top;
+      transform:scaleY(0);
+      margin: 0;
     }
 
 

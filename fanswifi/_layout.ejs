@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="/main.css">
     <link rel="stylesheet" href="/grid.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet">
     <title></title>
@@ -15,10 +16,33 @@
         document.getElementById('nav-content').classList.toggle("change");
       }
 
+      var previousTop = 0;
+      var currentscroll = 0;
+    window.onscroll = function (e) {
+      currentscroll = window.scrollY;
+      //console.log(currentscroll);
+      if(currentscroll < previousTop) {
+        document.getElementById('nav-bar').style.transform = "translateY(0)";
+      } else {
+        document.getElementById('nav-bar').style.transform = "translateY(-60px)";
+      }
+      previousTop = currentscroll;
+
+
+      //PLEASE CHANGE THIS
+      if(currentscroll > 800){
+        document.getElementById('nav-bar').style.backgroundColor = "black";
+        //console.log("blacknavbar");
+      } else {
+        document.getElementById('nav-bar').style.backgroundColor = "transparent";
+      }
+    }
+
+
   </script>
   <body>
 
-  <div class="nav-bar">
+  <div id="nav-bar">
     <div class="max-width">
       <div class="logo">
         <a href="index.html">
@@ -83,7 +107,7 @@
 
             <div class="botnav-logo">
               <a href="index.html">
-                <img src="http://placehold.it/140x33">
+                <img src="/img/logo-light.png">
               </a>
             </div>
         </div>
