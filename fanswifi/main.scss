@@ -31,6 +31,10 @@ h3{
 }
 
 h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  //text-transform: uppercase;
   //color: #F2631E;
 }
 
@@ -200,7 +204,8 @@ p {
 .top-screen{
   display:flex;
   height:40vh;
-  background-image: url("img/top_page.jpg")
+  //background-image: url("img/top_page.jpg");
+  background: linear-gradient(#BF2718, #F2631E);
 }
 
 .flex{
