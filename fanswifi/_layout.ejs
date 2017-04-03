@@ -38,6 +38,44 @@
       }
     }
 
+    function startLightBox() {
+      var lbBg = document.getElementById("lightBoxBg");
+      var lb = document.getElementById("lightBox");
+      var lbW = document.getElementById("lightBoxWidth");
+
+      lbBg.style.display = "block";
+      lb.style.display = "block";
+      lbW.style.display = "block";
+
+
+    }
+
+    // function dismiss() {
+    //   var lbBg = document.getElementById("lightBoxBg");
+    //   var lb = document.getElementById("lightBox");
+    //   console.log("dismiss");
+    //   //document.getElementById('fansvideo').pauseVideo();
+    //   lbBg.style.display = "none";
+    //   lb.style.display = "none";
+    // }
+
+//Dont understand this part too well
+    function toggleVideo(state) {
+  // if state == 'hide', hide. Else: show video
+        var div = document.getElementById("lightBox");
+        var iframe = div.getElementsByTagName("iframe")[0].contentWindow;
+        div.style.display = state == 'hide' ? 'none' : '';
+        func = state == 'hide' ? 'pauseVideo' : 'playVideo';
+        iframe.postMessage('{"event":"command","func":"' + func + '","args":""}','*');
+
+
+
+        var lbBg = document.getElementById("lightBoxBg");
+        var lbW = document.getElementById("lightBoxWidth");
+        lbBg.style.display = "none";
+        lbW.style.display="none";
+    }
+
 
   </script>
   <body>
