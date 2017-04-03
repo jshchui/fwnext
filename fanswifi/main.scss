@@ -1,5 +1,6 @@
 @import "grid.scss";
 
+//Presets
 body {
   font-family: "Helvetica";
   text-align: center;
@@ -34,26 +35,27 @@ h4 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   font-size: 20px;
+  //margin:0;
   //text-transform: uppercase;
   //color: #F2631E;
 }
 
 p {
-  font-size: 1em;
-  font-family: 'Lato', sans-serif;
+  font-size: 1em; //16px
+  font-family: 'Roboto', sans-serif;
 }
 
 img {
   max-width: 100%;
 }
+
+//Navigation Bar
 #nav-bar {
   height: 60px;
   transition: all 0.4s ease;
-  //background-color: #000;
-
   position: fixed;
   width: 100%;
-  z-index: 1;
+  z-index: 1; //makes nav bar be at the top
 
   ul {
     list-style-type: none;
@@ -69,30 +71,19 @@ img {
       }
     }
   }
-//deletable
+
   #nav-content {
     transition: all 0.4s;
   }
-  //==
+
 .logo {
     max-width:8em;
     margin-top: 0.7em;
     margin-left: 0.7em;
     z-index:5;
     float:left;
-    img {
-      width: 100%;
-    }
   }
 }
-
-// #nav-bar .change {
-//   background-color: black;
-// }
-
-// .change {
-//   background-color: black;
-// }
 
 //Hamburger Menu
 .hamburger {
@@ -122,11 +113,11 @@ img {
    transform: rotate(45deg) translate(-9px, -8px) ;
 }
 //Hamberger menu end
+//Navigation bar end
 
 
-
+//class presets
 .max-width {
-  //max-width: 1200px;
   max-width: 1200px;
   margin: 0 auto;
   overflow:auto;
@@ -138,7 +129,8 @@ img {
   margin: 0 auto;
   overflow:auto;
 }
-.spacing {
+
+.spacing { //for more padding space
   box-sizing: border-box;
   padding:1em;
 }
@@ -149,90 +141,6 @@ img {
   padding: 3em;
   box-sizing: border-box;
   overflow:auto;
-  img {
-    width: 100%;
-  }
-}
-
-
-#first-screen{
-  //height: calc(100vh - 65px);
-
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-
-  background-image: url("img/index_page.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-//Lightbox video
-#video-button {
-  width: 300px;
-  margin:0 auto;
-}
-
-#lightBoxWidth {
-  max-width: 1200px;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin-top: 5em;
-  margin-left: auto;
-  margin-right: auto;
-  display:none;
-  z-index: 1;
-}
-#lightBoxBg {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  opacity: 0.7;
-  display: none;
-  background-color:#000;
-  height:100%;
-  width: 100%;
-}
-
-#lightBox {
-  display: none;
-}
-
-.video-container {
-  position: relative;
-  padding-bottom: 56.25%;
-  padding-top: 30px; height: 0; overflow: hidden;
-}
-
-.video-container iframe,
-.video-container object,
-.video-container embed {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-
-
-#intro {
-
-}
-
-#audience {
-  overflow:auto;
-  //background-color: #efefef;
-  color: #FFF;
-  background-image: url("img/audience/audience.jpg")
-}
-
-#partner {
-  background-color:lightgrey;
 }
 
 .button {
@@ -250,6 +158,116 @@ img {
   }
 }
 
+//Flex mainly for center aligning
+.flex{
+  display: flex !important;
+}
+
+.vert-align-flex {
+  display:flex !important;
+  align-items:center;
+  justify-content: center;
+}
+
+
+//First screen
+#first-screen{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  background-image: url("img/index_page.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.customer-list {
+  background-color: rgba(31, 31, 31, 0.82);
+  margin-top: auto;
+
+}
+.customers {
+  padding:1em;
+}
+//First screen end
+
+
+//Video Button
+#video-button {
+  width: 100px;
+  margin:0 auto;
+  img{
+    max-width:100px;
+  }
+}
+
+//This is for the lightbox I made myself, can be deleted soon
+// #lightBoxWidth {
+//   max-width: 1200px;
+//   height: 100%;
+//   width: 100%;
+//   position: absolute;
+//   left: 0;
+//   right: 0;
+//   margin-top: 5em;
+//   margin-left: auto;
+//   margin-right: auto;
+//   display:none;
+//   z-index: 1;
+// }
+// #lightBoxBg {
+//   position: absolute;
+//   top: 0px;
+//   left: 0px;
+//   opacity: 0.7;
+//   display: none;
+//   background-color:#000;
+//   height:100%;
+//   width: 100%;
+// }
+//
+// #lightBox {
+//   display: none;
+// }
+//
+// .video-container {
+//   position: relative;
+//   padding-bottom: 56.25%;
+//   padding-top: 30px; height: 0; overflow: hidden;
+// }
+//
+// .video-container iframe,
+// .video-container object,
+// .video-container embed {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+// }
+
+
+#audience {
+  overflow:auto;
+  //background-color: #efefef;
+  color: #FFF;
+  background-image: url("img/audience/audience.jpg");
+
+  h4 {
+    margin-bottom: 0.5em;
+  }
+
+  p {
+    margin-top: 0.1em;
+  }
+}
+
+#partner {
+  background-color:lightgrey;
+}
+
+
 .award {
   padding:1em;
   img {
@@ -265,34 +283,7 @@ img {
 .top-screen{
   display:flex;
   height:40vh;
-  //background-image: url("img/top_page.jpg");
   background: linear-gradient(to bottom right, #BF2718, #F2631E);
-}
-
-.flex{
-  display: flex !important;
-}
-
-
-.vert-align-flex {
-  display:flex !important;
-  align-items:center;
-  justify-content: center;
-}
-
-.customer-list {
-  background-color: rgba(31, 31, 31, 0.82);
-  margin-top: auto;
-
-}
-.customers {
-  //padding: 1em 0.5em;
-  padding:1em;
-
-  img {
-    width: 100%;
-    height: auto;
-  }
 }
 
 
@@ -301,47 +292,40 @@ img {
 
 }
 
-.steps {
-  height: 1.875em; //30px
+.steps { //to make sure text wrapping doesnt change height of other things
+  //height: 1.875em; //30px
+  height:2em;
 }
 
 
-//Side Images
+//Side image - beyond max width
 .overflow-images-left {
   position: absolute;
   background-image: url('img/mockups/understand.png');
-  left: 5%;
+  left: 3%;
   width: 50%;
   height: 100%;
   //overflow: auto;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-
-  img {
-    max-width: 100%;
-  }
-
 }
 
 
 .overflow-images-right {
   position: absolute;
   background-image: url('img/mockups/understand.png');
-  right: 5%;
+  right: 3%;
   width: 50%;
   height: 100%;
 
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-
-  img {
-    max-width: 100%;
-  }
 }
 
 .side-image {
+  margin: 5em 0;
   position: relative;
   padding: 0;
   overflow: hidden;
@@ -353,16 +337,14 @@ img {
   }
 }
 
-#hardware {
-  // img {
-  //   padding:1.5em;
-  // }
-}
 
 #contact {
   background-color:lightgrey;
 }
 
+
+
+//Bot navigation
 .bot-nav {
   //background-color: #BF2718;
   //background-color: #F2631E;
@@ -388,6 +370,7 @@ img {
     }
   }
 }
+//Bot navigation end
 
 
 
@@ -419,7 +402,7 @@ img {
   .flex {
     display: block;
   }
-  
+
   #nav-bar {
     background-color: rgba(31,31,31,0.82);
     height: calc(310px - 255px);
@@ -481,6 +464,4 @@ img {
   .nav-container {
     flex-direction: column;
   }
-
-
 }
