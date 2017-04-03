@@ -4,39 +4,52 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="/main.css">
     <link rel="stylesheet" href="/grid.css">
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+
+    <link href="dist/lity.css" rel="stylesheet">
+    <script src="vendor/jquery.js"></script>
+    <script src="dist/lity.js"></script>
+
+
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet">
     <title></title>
   </head>
   <script> // add this in js later
-    function myFunction(x) {
-        x.classList.toggle("change");
-
-        document.getElementById('nav-content').classList.toggle("change");
-      }
-
-      var previousTop = 0;
-      var currentscroll = 0;
-    window.onscroll = function (e) {
-      currentscroll = window.scrollY;
-      //console.log(currentscroll);
-      if(currentscroll < previousTop) {
-        document.getElementById('nav-bar').style.transform = "translateY(0)";
-      } else {
-        document.getElementById('nav-bar').style.transform = "translateY(-60px)";
-      }
-      previousTop = currentscroll;
 
 
-      //PLEASE CHANGE THIS
-      if(currentscroll > 500){
-        document.getElementById('nav-bar').style.backgroundColor = "#F2631E";
-        //console.log("blacknavbar");
-      } else {
-        document.getElementById('nav-bar').style.backgroundColor = "transparent";
-      }
-    }
+
+
+    //hamburger menu toggling
+    // function myFunction(x) {
+    //     x.classList.toggle("change");
+    //     document.getElementById('nav-content').classList.toggle("change");
+    //   }
+
+    //Scrolling animation and color change
+    //   var previousTop = 0;
+    //   var currentscroll = 0;
+    // window.onscroll = function (e) {
+    //   currentscroll = window.scrollY;
+    //
+    //   if(currentscroll < previousTop) {
+    //     document.getElementById('nav-bar').style.transform = "translateY(0)";
+    //   } else {
+    //     document.getElementById('nav-bar').style.transform = "translateY(-60px)";
+    //   }
+    //   previousTop = currentscroll;
+    //   //PLEASE CHANGE THIS
+    //   if(currentscroll > 500){
+    //     document.getElementById('nav-bar').style.backgroundColor = "#F2631E";
+    //     //console.log("blacknavbar");
+    //   } else {
+    //     document.getElementById('nav-bar').style.backgroundColor = "transparent";
+    //   }
+    // }
 
     function startLightBox() {
       var lbBg = document.getElementById("lightBoxBg");
@@ -46,8 +59,6 @@
       lbBg.style.display = "block";
       lb.style.display = "block";
       lbW.style.display = "block";
-
-
     }
 
     // function dismiss() {
@@ -68,15 +79,11 @@
         func = state == 'hide' ? 'pauseVideo' : 'playVideo';
         iframe.postMessage('{"event":"command","func":"' + func + '","args":""}','*');
 
-
-
         var lbBg = document.getElementById("lightBoxBg");
         var lbW = document.getElementById("lightBoxWidth");
         lbBg.style.display = "none";
         lbW.style.display="none";
     }
-
-
   </script>
   <body>
 
@@ -88,7 +95,8 @@
         </a>
       </div>
 
-      <div class="click" onclick="myFunction(this)">
+      <!-- <div class="click" onclick="myFunction(this)"> Javascript Version(delete) -->
+      <div class="click">
         <div class="hamburger">
           <div class="bar1"></div>
           <div class="bar2"></div>

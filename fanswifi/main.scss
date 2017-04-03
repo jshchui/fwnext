@@ -302,7 +302,7 @@ img {
 }
 
 .steps {
-  height: 30px;
+  height: 1.875em; //30px
 }
 
 
@@ -354,9 +354,9 @@ img {
 }
 
 #hardware {
-  img {
-    padding:1.5em;
-  }
+  // img {
+  //   padding:1.5em;
+  // }
 }
 
 #contact {
@@ -401,18 +401,25 @@ img {
   }
 }
 
+@media(max-width: 1100px) {
+  h4{
+    font-size: 1em;
+  }
+}
+
 @media(max-width: 750px) {
   h1 {
     font-size: 2em;
   }
 
   h2 {
-    font-size: 1em;
+    font-size: 1.1em;
   }
 
   .flex {
     display: block;
   }
+  
   #nav-bar {
     background-color: rgba(31,31,31,0.82);
     height: calc(310px - 255px);
@@ -426,7 +433,6 @@ img {
         box-sizing: border-box;
       }
     }
-
 
     .change #nav-content{
       //display: block !important;
@@ -442,9 +448,6 @@ img {
       transform:scaleY(0);
       margin: 0;
     }
-
-
-
 
     .hamburger {
       display: inline-block;
@@ -471,7 +474,6 @@ img {
     float: none;
     margin: 0;
   }
-
 }
 
 
