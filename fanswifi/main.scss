@@ -60,16 +60,30 @@ img {
   ul {
     list-style-type: none;
     float:right;
+
+    li:hover {
+      color: grey;
+    }
     li {
       float: left;
       padding: 0.5em 1.5em;
       transition: all 0.4s ease;
-      a {
-          font-family:'Montserrat', sans-serif;
-          color: #FFF;
-          text-decoration:none;
-      }
+      font-family:'Montserrat', sans-serif;
+      color: #FFFFFF;
+      text-decoration:none;
+      // a {
+      //     font-family:'Montserrat', sans-serif;
+      //     color: #FFF;
+      //     text-decoration:none;
+      // }
+
+      transition: 0.4s all;
     }
+
+
+
+
+
   }
 
   #nav-content {
@@ -144,7 +158,7 @@ img {
 }
 
 .button {
-  padding: 1em 3em;
+  padding: 0.7em 2.5em;
   border-radius: 1em;
   //border-style: solid;
   //border-color: #F2631E;
@@ -264,9 +278,23 @@ img {
 }
 
 #partner {
+  padding: 5em 0;
   background-color:lightgrey;
 }
 
+#buy {
+  padding: 5em 0;
+}
+
+
+.company-container {
+  background-color: #F2631E;
+  transition: 0.4s all;
+}
+
+.company-container:hover {
+  background-color: #BF2718;
+}
 
 .award {
   padding:1em;
@@ -284,6 +312,16 @@ img {
   display:flex;
   height:40vh;
   background: linear-gradient(to bottom right, #BF2718, #F2631E);
+}
+
+#product-screen {
+  display:flex;
+  height: 40vh;
+  background-image: url('img/producttop.jpg');
+}
+
+.top-screen-text-down {
+  margin-top:2.5em;
 }
 
 
@@ -314,8 +352,8 @@ img {
 
 .overflow-images-right {
   position: absolute;
-  background-image: url('img/mockups/understand.png');
-  right: 3%;
+  background-image: url('img/mockups/control.png');
+  right: 0;
   width: 50%;
   height: 100%;
 
@@ -325,7 +363,7 @@ img {
 }
 
 .side-image {
-  margin: 5em 0;
+  margin: 3em 0;
   position: relative;
   padding: 0;
   overflow: hidden;
@@ -337,9 +375,41 @@ img {
   }
 }
 
+.circle-steps {
+  font-size: 1.5em;
+  color: #F2631E;
+}
+
+
+#partnerfaq {
+
+  p, h4 {
+    text-align:left;
+  }
+}
+
 
 #contact {
   background-color:lightgrey;
+}
+
+#hardware {
+  img {
+    //max-width: 200px;
+  }
+}
+
+.row-wrapper {
+  border-bottom: 1px solid rgba(242, 99, 30, 0.47);
+
+  //delete this
+  .spacing {
+    padding:2em;
+  }
+}
+
+.hardware-wrapper {
+  border-right: 1px solid rgba(242, 99, 30, 0.47);
 }
 
 
@@ -348,7 +418,7 @@ img {
 .bot-nav {
   //background-color: #BF2718;
   //background-color: #F2631E;
-  background: linear-gradient(to bottom right, #BF2718, #F2631E);
+  background: linear-gradient(to bottom right, #F2631E, #BF2718);
   color:white;
   text-align:left;
   p {
@@ -392,16 +462,14 @@ img {
 
 @media(max-width: 750px) {
   h1 {
-    font-size: 2em;
+    font-size: 1.7em;
   }
 
   h2 {
-    font-size: 1.1em;
+    font-size: 1.2em;
   }
 
-  .flex {
-    display: block;
-  }
+
 
   #nav-bar {
     background-color: rgba(31,31,31,0.82);
@@ -463,5 +531,11 @@ img {
 @media(max-width: 500px) {
   .nav-container {
     flex-direction: column;
+  }
+
+  .hardware-wrapper {
+    border-right: none;
+    //border-bottom: 1px solid rgba(242, 99, 30, 0.47);
+
   }
 }
