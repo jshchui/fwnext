@@ -19,7 +19,7 @@ $(document).ready(function() {
     prevScroll = currentScroll;
 
     //nav is cleared at the top
-    if(currentScroll > 500) {
+    if(currentScroll > 400) {
       $('#nav-bar').css("background-color", "#F2631E");
     } else {
       $('#nav-bar').css("background-color", "transparent");

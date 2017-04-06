@@ -76,30 +76,30 @@
     <a class="button" href="">Call Us 852 3709 7525</a>
     <h2>Or</h2>
     <h4>Fill out the form below and we will give you a call shortly!</h4>
-    <form action="">
+    <form action="mail.php" name="myform" method="post">
       <div class="container fluid">
         <div class="row text-left">
           <div class="col md-6 col sm-6 spacing">
             <h4>First Name</h4>
-            <input class="col md-12"  type="text" name="FirstName">
+            <input class="col md-12"  type="text" name="firstname">
           </div>
           <div class="col md-6 col sm-6 spacing">
             <h4>Last Name</h4>
-            <input class="col md-12"  type="text" name="LastName">
+            <input class="col md-12"  type="text" name="lastname">
           </div>
           <div class="col md-6 col sm-6 spacing">
             <h4>Phone</h4>
-            <input class="col md-12"  type="text">
+            <input class="col md-12"  type="text" name="phone">
           </div>
           <div class="col md-6 col sm-6 spacing">
             <h4>E-mail</h4>
-            <input class="col md-12"  type="text">
+            <input class="col md-12"  type="text" name="email">
           </div>
 
         </div>
 
         <div class="col md-12 center">
-          <input class="button" type="submit">
+          <input  type="submit" value="Send" name="submit">
         </div>
       </div>
     </form>
