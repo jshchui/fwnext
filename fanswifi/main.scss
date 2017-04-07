@@ -4,7 +4,7 @@
 body {
   font-family: "Helvetica";
   text-align: center;
-  background: #f4f4f7;
+  //background: #f4f4f7;
   color: #444;
   margin: 0;
   padding: 0;
@@ -68,7 +68,7 @@ a {
     float:right;
 
     li:hover {
-      color: grey;
+      color: #ff9f39;
     }
     li {
       float: left;
@@ -164,8 +164,8 @@ a {
 }
 
 .button {
-  padding: 0.7em 2.5em;
-  border-radius: 1em;
+  padding: 12.5px 33px;
+  border-radius: 10px;
   //border-style: solid;
   //border-color: #F2631E;
   background-color: #F2631E;
@@ -174,9 +174,10 @@ a {
   display: inline-block;
   margin-top: 1em;
 
-  h3 {
+  h3, h4 {
     margin:0;
   }
+
 }
 
 //Flex mainly for center aligning
@@ -188,6 +189,10 @@ a {
   display:flex !important;
   align-items:center;
   justify-content: center;
+}
+
+.left-content {
+  text-align: left;
 }
 
 
@@ -284,13 +289,19 @@ a {
   }
 }
 
+.audience-font-awesome {
+  margin: 0 auto;
+  //color: #F2631E;
+}
+
 #partner {
   padding: 5em 0;
-  background-color:lightgrey;
+  background-color:#f4f4f7;
 }
 
 #buy {
   padding: 5em 0;
+  background:#f4f4f7;
 }
 
 
@@ -382,6 +393,10 @@ a {
   }
 }
 
+.font-awesome {
+  color:#F2631E;
+}
+
 .circle-steps {
   font-size: 1.5em;
   color: #F2631E;
@@ -397,7 +412,7 @@ a {
 
 
 #contact {
-  background-color:lightgrey;
+  background-color:#f4f4f7;
 }
 
 #hardware {
@@ -443,7 +458,19 @@ textarea {
         height: 100% !important;
     }
 
+#contactus {
+  //background-color: #F2631E;
+  background: url("/img/contactbg.jpg");
+  //background: linear-gradient(to bottom right,#F2631E,#BF2718);
+  //color: #FFF;
+  min-height: 100vh;
+  text-align:left;
+  color: #FFFFFF;
 
+  img {
+    max-width: 150px;
+  }
+}
 
 //Bot navigation
 .bot-nav {
@@ -485,13 +512,17 @@ textarea {
   }
 }
 
-@media(max-width: 1100px) {
+@media(max-width: 1000px) {
   h4{
     font-size: 1em;
   }
+
+  #contactus {
+    padding-top: 4em;
+  }
 }
 
-@media(max-width: 850px) {
+@media(max-width: 950px) {
   #nav-bar {
     //background-color: rgba(31,31,31,0.82);
     background-color: #F2631E;
@@ -505,7 +536,7 @@ textarea {
         padding:1em;
         box-sizing: border-box;
 
-        border-top: 2px solid #FFF;
+        //border-top: 2px solid #FFF;
       }
     }
 
@@ -581,7 +612,7 @@ textarea {
   }
 
   .slide {
-    padding: 0;
+    padding: 3em 0;
   }
 
 }
