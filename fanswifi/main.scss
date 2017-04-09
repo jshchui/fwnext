@@ -103,6 +103,12 @@ a {
     z-index:5;
     float:left;
   }
+
+  .portal {
+    float:right;
+    color:#FFFFFF;
+    padding:1em;
+  }
 }
 
 //Hamburger Menu
@@ -404,7 +410,6 @@ a {
 
 
 #partnerfaq {
-
   p, h4 {
     text-align:left;
   }
@@ -559,6 +564,10 @@ textarea {
     .hamburger {
       display: inline-block;
     }
+
+    .portal {
+      padding:0.7em;
+    }
   }
 }
 
@@ -592,7 +601,7 @@ textarea {
     margin: 0;
   }
 
-  #install {
+  #install, #partner-testimonials {
     .flex {
       flex-direction: column;
     }

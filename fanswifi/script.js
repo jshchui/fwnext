@@ -1,7 +1,8 @@
 $(document).ready(function() {
   //Hamburger menu toggling
-  $('.click').click(function() {
-    $(`.click`).toggleClass('change');
+  $('.hamburger').click(function() {
+    $(`.hamburger`).toggleClass('change');
+    $('.hamburger').parent().toggleClass('change');
   });
 
   //Scrolling animation and color change
