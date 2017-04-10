@@ -33,7 +33,7 @@ h3{
 
 h4 {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
+  font-weight: 200;
   font-size: 20px;
   //margin:0;
   //text-transform: uppercase;
@@ -43,6 +43,7 @@ h4 {
 p {
   //text-align:left;
   font-size: 1em; //16px
+  line-height: 1.4em;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -195,6 +196,8 @@ a {
   display:flex !important;
   align-items:center;
   justify-content: center;
+
+
 }
 
 .left-content {
@@ -212,7 +215,16 @@ a {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  display: -ms-flexbox;
+  display: -webkit-flex;
+
+  -ms-flex: 1;
+   -webkit-flex: 1;
+   flex: 1;
 }
+
+
 
 .customer-list {
   background-color: rgba(31, 31, 31, 0.82);
@@ -298,6 +310,10 @@ a {
 .audience-font-awesome {
   margin: 0 auto;
   //color: #F2631E;
+  -ms-flex: 1;
+   -webkit-flex: 1;
+   flex: 1;
+
 }
 
 #partner {
@@ -335,7 +351,7 @@ a {
 .top-screen{
   display:flex;
   height:40vh;
-  background: linear-gradient(to bottom right, #BF2718, #F2631E);
+  background: linear-gradient(to bottom right, #BF2718, #F2631E);;
 }
 
 #product-screen {
@@ -363,7 +379,7 @@ a {
 //Side image - beyond max width
 .overflow-images-left {
   position: absolute;
-  background-image: url('img/mockups/understand.png');
+  background-image: url('img/mockups/understand2.png');
   left: 3%;
   width: 50%;
   height: 100%;
@@ -376,7 +392,7 @@ a {
 
 .overflow-images-right {
   position: absolute;
-  background-image: url('img/mockups/control.png');
+  background-image: url('img/mockups/control2.png');
   right: 0;
   width: 50%;
   height: 100%;
@@ -468,12 +484,46 @@ textarea {
   background: url("/img/contactbg.jpg");
   //background: linear-gradient(to bottom right,#F2631E,#BF2718);
   //color: #FFF;
-  min-height: 100vh;
+  min-height:100vh; // ie doesnt support this
   text-align:left;
   color: #FFFFFF;
 
   img {
     max-width: 150px;
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+     /* IE10+ CSS styles go here */
+     #contactus {
+       height:100vh;
+     }
+}
+
+.ie #contactus {
+  height: 100vh;
+}
+
+.success {
+  p {
+    text-align:left;
+  }
+
+  ul {
+    padding: 10px;
+    list-style:none;
+    li {
+
+      .result-icon {
+        float:left;
+      }
+
+      .result {
+        margin-left: 2em;
+        margin-top:0.1em;
+      }
+    }
+
   }
 }
 
@@ -569,6 +619,13 @@ textarea {
       padding:0.7em;
     }
   }
+
+//change and delete?
+  .max-width-1400 {
+    box-sizing:border-box;
+    padding-left:3em;
+    padding-right:3em;
+  }
 }
 
 @media(max-width: 750px) {
@@ -601,9 +658,15 @@ textarea {
     margin: 0;
   }
 
-  #install, #partner-testimonials {
+  #install, #partner-testimonials, #partner-features {
     .flex {
       flex-direction: column;
+    }
+  }
+
+  .top-screen, #partner-features {
+    .vert-align-flex {
+      flex-direction:column;
     }
   }
 }
@@ -622,6 +685,10 @@ textarea {
 
   .slide {
     padding: 3em 0;
+  }
+
+  .max-width-1400 {
+    padding: 0;
   }
 
 }
