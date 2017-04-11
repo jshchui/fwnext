@@ -9,13 +9,12 @@
     <!-- Start of fanswifisupport Zendesk Widget script -->
     <script>/*<![CDATA[*/window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(e){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var e=this.createElement("script");n&&(this.domain=n),e.id="js-iframe-async",e.src="https://assets.zendesk.com/embeddable_framework/main.js",this.t=+new Date,this.zendeskHost="fanswifisupport.zendesk.com",this.zEQueue=a,this.body.appendChild(e)},o.write('<body onload="document._l();">'),o.close()}();
     /*]]>*/</script>
-<!-- End of fanswifisupport Zendesk Widget script -->
+    <!-- End of fanswifisupport Zendesk Widget script -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="script.js"></script>
     <link href="dist/lity.css" rel="stylesheet">
-    <!-- <script src="vendor/jquery.js"></script> -->
     <script src="dist/lity.js"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
@@ -24,76 +23,6 @@
     <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet"> -->
     <title></title>
   </head>
-  <script> // add this in js later
-
-
-
-
-    //hamburger menu toggling
-    // function myFunction(x) {
-    //     x.classList.toggle("change");
-    //     document.getElementById('nav-content').classList.toggle("change");
-    //   }
-
-    //Scrolling animation and color change
-    //   var previousTop = 0;
-    //   var currentscroll = 0;
-    // window.onscroll = function (e) {
-    //   currentscroll = window.scrollY;
-    //
-    //   if(currentscroll < previousTop) {
-    //     document.getElementById('nav-bar').style.transform = "translateY(0)";
-    //   } else {
-    //     document.getElementById('nav-bar').style.transform = "translateY(-60px)";
-    //   }
-    //   previousTop = currentscroll;
-    //   //PLEASE CHANGE THIS
-    //   if(currentscroll > 500){
-    //     document.getElementById('nav-bar').style.backgroundColor = "#F2631E";
-    //     //console.log("blacknavbar");
-    //   } else {
-    //     document.getElementById('nav-bar').style.backgroundColor = "transparent";
-    //   }
-    // }
-
-
-/* my light box javascript, can be deleted soon
-    function startLightBox() {
-      var lbBg = document.getElementById("lightBoxBg");
-      var lb = document.getElementById("lightBox");
-      var lbW = document.getElementById("lightBoxWidth");
-
-      lbBg.style.display = "block";
-      lb.style.display = "block";
-      lbW.style.display = "block";
-    }
-
-    // function dismiss() {
-    //   var lbBg = document.getElementById("lightBoxBg");
-    //   var lb = document.getElementById("lightBox");
-    //   console.log("dismiss");
-    //   //document.getElementById('fansvideo').pauseVideo();
-    //   lbBg.style.display = "none";
-    //   lb.style.display = "none";
-    // }
-
-//Dont understand this part too well
-    function toggleVideo(state) {
-  // if state == 'hide', hide. Else: show video
-        var div = document.getElementById("lightBox");
-        var iframe = div.getElementsByTagName("iframe")[0].contentWindow;
-        div.style.display = state == 'hide' ? 'none' : '';
-        func = state == 'hide' ? 'pauseVideo' : 'playVideo';
-        iframe.postMessage('{"event":"command","func":"' + func + '","args":""}','*');
-
-        var lbBg = document.getElementById("lightBoxBg");
-        var lbW = document.getElementById("lightBoxWidth");
-        lbBg.style.display = "none";
-        lbW.style.display="none";
-    }
-
-    */
-  </script>
   <body>
 
   <div id="nav-bar">
@@ -149,9 +78,9 @@
 
         <div class="col md-3 spacing">
           <h4>Links</h4>
-          <p><a href="">Product</a></p>
-          <p><a href="">Partner</a></p>
-          <p><a href="">Success Stories</a></p>
+          <p><a href="/product.html">Product</a></p>
+          <p><a href="/partner.html">Partner</a></p>
+          <p><a href="/success.html">Success Stories</a></p>
           <p><a href="">Resources</a></p>
           <p><a href="/policy.html">Privacy and Terms</a></p>
         </div>

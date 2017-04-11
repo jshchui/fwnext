@@ -216,12 +216,6 @@ a {
   background-position: center;
   background-repeat: no-repeat;
 
-  display: -ms-flexbox;
-  display: -webkit-flex;
-
-  -ms-flex: 1;
-   -webkit-flex: 1;
-   flex: 1;
 }
 
 
@@ -310,10 +304,6 @@ a {
 .audience-font-awesome {
   margin: 0 auto;
   //color: #F2631E;
-  -ms-flex: 1;
-   -webkit-flex: 1;
-   flex: 1;
-
 }
 
 #partner {
@@ -495,8 +485,33 @@ textarea {
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
      /* IE10+ CSS styles go here */
+     #nav-bar {
+       background-color: #F2631E;
+     }
+
      #contactus {
        height:100vh;
+     }
+
+     .side-image {
+       height: 550px;
+       overflow:hidden;
+     }
+
+     .max-width {
+       width: 1200px;
+     }
+
+     .audience-font-awesome{
+       -ms-flex: 1;
+        -webkit-flex: 1;
+        flex: 1;
+     }
+
+     @media (max-width:750px) {
+       .side-image {
+         height: auto;
+       }
      }
 }
 
