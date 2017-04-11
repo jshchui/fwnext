@@ -58,7 +58,7 @@ a {
 
 //Navigation Bar
 #nav-bar {
-  height: 60px;
+  height: 70px;
   transition: all 0.4s ease;
   position: fixed;
   width: 100%;
@@ -73,7 +73,7 @@ a {
     }
     li {
       float: left;
-      padding: 0.5em 1.5em;
+      padding: 0.7em 1.5em;
       transition: all 0.4s ease;
       font-family:'Montserrat', sans-serif;
       color: #FFFFFF;
@@ -98,8 +98,8 @@ a {
   }
 
 .logo {
-    max-width:8em;
-    margin-top: 1em;
+    max-width:7em;
+    margin-top: 0.6em;
     margin-left: 0.7em;
     z-index:5;
     float:left;
@@ -116,7 +116,7 @@ a {
 .hamburger {
   display: none;
   cursor: pointer;
-  padding:0.5em 1em;
+  padding: 0.9em 1em;
   float:right;
 }
 
@@ -223,7 +223,7 @@ a {
 .customer-list {
   background-color: rgba(31, 31, 31, 0.82);
   margin-top: auto;
-
+  padding:1em;
 }
 .customers {
   padding:1em;
@@ -240,57 +240,14 @@ a {
   }
 }
 
-//This is for the lightbox I made myself, can be deleted soon
-// #lightBoxWidth {
-//   max-width: 1200px;
-//   height: 100%;
-//   width: 100%;
-//   position: absolute;
-//   left: 0;
-//   right: 0;
-//   margin-top: 5em;
-//   margin-left: auto;
-//   margin-right: auto;
-//   display:none;
-//   z-index: 1;
-// }
-// #lightBoxBg {
-//   position: absolute;
-//   top: 0px;
-//   left: 0px;
-//   opacity: 0.7;
-//   display: none;
-//   background-color:#000;
-//   height:100%;
-//   width: 100%;
-// }
-//
-// #lightBox {
-//   display: none;
-// }
-//
-// .video-container {
-//   position: relative;
-//   padding-bottom: 56.25%;
-//   padding-top: 30px; height: 0; overflow: hidden;
-// }
-//
-// .video-container iframe,
-// .video-container object,
-// .video-container embed {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-// }
-
-
 #audience {
   overflow:auto;
   //background-color: #efefef;
   color: #FFF;
   background-image: url("img/audience/audience.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
   h4 {
     margin-bottom: 0.5em;
@@ -320,6 +277,8 @@ a {
 .company-container {
   background-color: #F2631E;
   transition: 0.4s all;
+  padding-top: 2em;
+    padding-bottom: 2em;
 }
 
 .company-container:hover {
@@ -345,9 +304,24 @@ a {
 }
 
 #product-screen {
-  display:flex;
-  height: 40vh;
   background-image: url('img/producttop.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#partner-screen {
+  background-image: url('img/partnertop.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#success-screen {
+  background-image: url('img/successtop.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .top-screen-text-down {
@@ -472,6 +446,9 @@ textarea {
 #contactus {
   //background-color: #F2631E;
   background: url("/img/contactbg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   //background: linear-gradient(to bottom right,#F2631E,#BF2718);
   //color: #FFF;
   min-height:100vh; // ie doesnt support this
@@ -511,6 +488,13 @@ textarea {
      @media (max-width:750px) {
        .side-image {
          height: auto;
+       }
+
+     }
+
+     @media (max-width: 1200px) {
+       .max-width {
+         width: auto;
        }
      }
 }
@@ -571,6 +555,24 @@ textarea {
 //Bot navigation end
 
 
+//css fade in practice
+// .come-in {
+//   transform: translateY(200px);
+//   animation: come-in 0.8s ease forwards;
+//   opacity: 0;
+// }
+// .come-in:nth-child(odd) {
+//   animation-duration: 1.3s; /* So they look staggered */
+// }
+//
+// @keyframes come-in {
+//   to { transform: translateX(0);
+//
+//   opacity:1;}
+//
+// }
+
+
 
 @media(max-width: 1600px) {
   .overflow-images-left{
@@ -596,7 +598,7 @@ textarea {
   #nav-bar {
     //background-color: rgba(31,31,31,0.82);
     background-color: #F2631E;
-    height: calc(310px - 255px);
+    height: calc(310px - 242px);
     ul {
       padding: 0;
       width: 100%;
@@ -619,7 +621,6 @@ textarea {
     }
 
     #nav-content {
-      //display:none;
       opacity: 0;
       transform-origin: top;
       transform:scaleY(0);
@@ -631,7 +632,8 @@ textarea {
     }
 
     .portal {
-      padding:0.7em;
+      // padding:0.7em;
+      padding:1.2em 0.7em 0.7em 0.7em
     }
   }
 
@@ -699,7 +701,7 @@ textarea {
   }
 
   .slide {
-    padding: 3em 0;
+    padding: 3em 1em;
   }
 
   .max-width-1400 {
