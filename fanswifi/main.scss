@@ -68,21 +68,19 @@ a {
     list-style-type: none;
     float:right;
 
-    li:hover {
+    li a:hover {
       color: #ff9f39;
     }
     li {
       float: left;
-      padding: 0.7em 1.5em;
-      transition: all 0.4s ease;
       font-family:'Montserrat', sans-serif;
       color: #FFFFFF;
       text-decoration:none;
-      // a {
-      //     font-family:'Montserrat', sans-serif;
-      //     color: #FFF;
-      //     text-decoration:none;
-      // }
+      a {
+          display:block;
+          padding:1em 1.5em;
+            transition: all 0.4s ease;
+      }
 
       transition: 0.4s all;
     }
@@ -108,7 +106,7 @@ a {
   .portal {
     float:right;
     color:#FFFFFF;
-    padding:1em;
+    padding: 1.5em 1em 1em 1em;
   }
 }
 
@@ -239,6 +237,7 @@ a {
     max-width:100px;
   }
 }
+
 
 #audience {
   overflow:auto;
@@ -605,7 +604,7 @@ textarea {
       li {
         width: 100%;
         margin: 0;
-        padding:1em;
+        //padding:1em;
         box-sizing: border-box;
 
         //border-top: 2px solid #FFF;
