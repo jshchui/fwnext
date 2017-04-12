@@ -1,8 +1,23 @@
 $(document).ready(function() {
+  //var dropdown = false;
   //Hamburger menu toggling
-  $('.hamburger').click(function() {
-    $(`.hamburger`).toggleClass('change');
-    $('.hamburger').parent().toggleClass('change');
+  $('#hamburger').click(function(e) {
+    $('#hamburger').parent().toggleClass('change');
+    $('#nav-bar').css("background-color", "#F2631E");
+    //dropdown = !dropdown;
+    console.log("this cannnot be running");
+  });
+//&& e.target.parentNode.id !== 'hamburger'
+  $(document).click(function(e) {
+    //console.log( dropdown);
+     if($('#click').hasClass('change')) {
+      //if(dropdown === true) {
+      if (e.target.id != 'hamburger' && e.target.parentNode.id !== 'hamburger' && e.target.id != 'nav-content') {
+        $('#hamburger').parent().toggleClass('change');
+        console.log('toggle menu');
+        //dropdown = false;
+      }
+    }
   });
 
   //Scrolling animation and color change
@@ -12,6 +27,9 @@ $(document).ready(function() {
     currentScroll = $(window).scrollTop();
 
     //nav goes up during downscroll, comes out when upscroll
+    if(currentScroll < 900) {
+      $('#nav-bar').css("-webkit-transform", 'translateY(0)');
+    } else
     if(currentScroll < prevScroll) {
       $('#nav-bar').css("-webkit-transform", 'translateY(0)');
     } else  {
@@ -20,49 +38,10 @@ $(document).ready(function() {
     prevScroll = currentScroll;
 
     //nav is cleared at the top
-    if(currentScroll > 400) {
+    if(currentScroll > 300) {
       $('#nav-bar').css("background-color", "#F2631E");
     } else {
       $('#nav-bar').css("background-color", "transparent");
     }
   });
-
-
-
-
-
-  // (function($) {
-  //   $.fn.visible = function(partial) {
-  //       var $t            = $(this),
-  //           $w            = $(window),
-  //           viewTop       = $w.scrollTop(),
-  //           viewBottom    = viewTop + $w.height(),
-  //           _top          = $t.offset().top,
-  //           _bottom       = _top + $t.height(),
-  //           compareTop    = partial === true ? _bottom : _top,
-  //           compareBottom = partial === true ? _top : _bottom;
-  //     return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
-  //   };
-  // })(jQuery);
-  //
-  // var win = $(window);
-  // var allMods = $(".slide");
-  //
-  // allMods.each(function(i, el) {
-  //   var el = $(el);
-  //   if (el.visible(true)) {
-  //     el.addClass("already-visible");
-  //   }
-  // });
-  //
-  // win.scroll(function(event) {
-  //
-  //   allMods.each(function(i, el) {
-  //     var el = $(el);
-  //     if (el.visible(true)) {
-  //       el.addClass("come-in");
-  //     }
-  //   });
-  //
-  // });
 });

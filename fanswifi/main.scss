@@ -4,7 +4,6 @@
 body {
   font-family: "Helvetica";
   text-align: center;
-  //background: #f4f4f7;
   color: #444;
   margin: 0;
   padding: 0;
@@ -34,21 +33,33 @@ h3{
 h4 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 200;
-  font-size: 20px;
-  //margin:0;
-  //text-transform: uppercase;
-  //color: #F2631E;
+  font-size: 1.25em;
+
+}
+
+h5 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1em;
+  font-weight:200;
 }
 
 p {
-  //text-align:left;
   font-size: 1em; //16px
   line-height: 1.4em;
   font-family: 'Roboto', sans-serif;
 }
 
 img {
-  max-width: 100%;
+  width: 100%;
+}
+
+li {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.4em;
+}
+
+.bolded {
+  font-family: 'Montserrat', sans-serif;
 }
 
 a {
@@ -63,6 +74,7 @@ a {
   position: fixed;
   width: 100%;
   z-index: 1; //makes nav bar be at the top
+  background-color: transparent;
 
   ul {
     list-style-type: none;
@@ -84,12 +96,7 @@ a {
 
       transition: 0.4s all;
     }
-
-
-
-
-
-  }
+  }//end of ul
 
   #nav-content {
     transition: all 0.4s;
@@ -111,7 +118,7 @@ a {
 }
 
 //Hamburger Menu
-.hamburger {
+#hamburger {
   display: none;
   cursor: pointer;
   padding: 0.9em 1em;
@@ -137,7 +144,7 @@ a {
   -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
    transform: rotate(45deg) translate(-9px, -8px) ;
 }
-//Hamberger menu end
+//end of Hamburger Menu
 //Navigation bar end
 
 
@@ -145,7 +152,6 @@ a {
 .max-width {
   max-width: 1200px;
   margin: 0 auto;
-  overflow:auto;
 }
 
 .max-width-1400 {
@@ -171,8 +177,6 @@ a {
 .button {
   padding: 12.5px 33px;
   border-radius: 10px;
-  //border-style: solid;
-  //border-color: #F2631E;
   background-color: #F2631E;
   text-decoration: none;
   color: #FFF;
@@ -182,10 +186,9 @@ a {
   h3, h4 {
     margin:0;
   }
-
 }
 
-//Flex mainly for center aligning
+//Flex mainly for vertical aligning
 .flex{
   display: flex !important;
 }
@@ -194,111 +197,30 @@ a {
   display:flex !important;
   align-items:center;
   justify-content: center;
-
-
 }
 
 .left-content {
   text-align: left;
 }
 
-
-//First screen
-#first-screen{
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-
-  background-image: url("img/index_page.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
+.steps { //to make sure text wrapping doesnt change height of other things
+  height:2em;
 }
 
-
-
-.customer-list {
-  background-color: rgba(31, 31, 31, 0.82);
-  margin-top: auto;
-  padding:1em;
-}
-.customers {
-  padding:1em;
-}
-//First screen end
-
-
-//Video Button
-#video-button {
-  width: 100px;
-  margin:0 auto;
-  img{
-    max-width:100px;
-  }
+.font-awesome {
+  color:#F2631E;
 }
 
-
-#audience {
-  overflow:auto;
-  //background-color: #efefef;
-  color: #FFF;
-  background-image: url("img/audience/audience.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  h4 {
-    margin-bottom: 0.5em;
-  }
-
-  p {
-    margin-top: 0.1em;
-  }
+.order-span {
+  font-size: 1.5em;
+  color: #F2631E;
 }
 
-.audience-font-awesome {
-  margin: 0 auto;
-  //color: #F2631E;
-}
-
-#partner {
-  padding: 5em 0;
-  background-color:#f4f4f7;
-}
-
-#buy {
-  padding: 5em 0;
-  background:#f4f4f7;
-}
-
-
-.company-container {
-  background-color: #F2631E;
-  transition: 0.4s all;
-  padding-top: 2em;
-    padding-bottom: 2em;
-}
-
-.company-container:hover {
-  background-color: #BF2718;
-}
-
-.award {
-  padding:1em;
-  img {
-    max-width: 172px;
-  }
-}
-
-.first-slide-content-align {
-  padding-top:5em;
-  margin-top: auto;
-}
-
+//The first slide of every screen sesttings
 .top-screen{
   display:flex;
   height:40vh;
+  min-height: 20em;
   background: linear-gradient(to bottom right, #BF2718, #F2631E);;
 }
 
@@ -326,18 +248,78 @@ a {
 .top-screen-text-down {
   margin-top:2.5em;
 }
+//end of first slide of every screen settings
 
+//First screen
+#first-screen{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 
-//WiFi Steps
-.mockup {
-
+  background-image: url("img/index_page.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.steps { //to make sure text wrapping doesnt change height of other things
-  //height: 1.875em; //30px
-  height:2em;
+.first-slide-content-align {
+  padding-top:5em;
+  margin-top: auto;
 }
 
+.customer-list {
+  background-color: rgba(31, 31, 31, 0.82);
+  margin-top: auto;
+  padding:1em;
+}
+.customers {
+  padding:1em;
+}
+
+//Video Button
+#video-button {
+  width: 100px;
+  margin:0 auto;
+  img{
+    max-width:100px;
+  }
+}
+
+#audience {
+  overflow:auto;
+  color: #FFF;
+  background-image: url("img/audience/audience.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  h4 {
+    margin-bottom: 0.5em;
+  }
+
+  p {
+    margin-top: 0.1em;
+  }
+}
+
+.audience-font-awesome {
+  margin: 0 auto;
+}
+
+#partner {
+  padding: 5em 0;
+  background-color:#f4f4f7;
+}
+
+.award {
+  padding:1em;
+  img {
+    max-width: 172px;
+  }
+}
+//end of first slide
+
+//Product Page
 
 //Side image - beyond max width
 .overflow-images-left {
@@ -346,12 +328,10 @@ a {
   left: 3%;
   width: 50%;
   height: 100%;
-  //overflow: auto;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
 }
-
 
 .overflow-images-right {
   position: absolute;
@@ -372,21 +352,19 @@ a {
   overflow: hidden;
   min-height: 550px;
 
-//delete maybe
   img {
     max-width: 75px;
   }
 }
 
-.font-awesome {
-  color:#F2631E;
+#buy {
+  padding: 5em 0;
+  background:#f4f4f7;
 }
+//End of product page
 
-.circle-steps {
-  font-size: 1.5em;
-  color: #F2631E;
-}
 
+//Partner Page
 
 #partnerfaq {
   p, h4 {
@@ -394,21 +372,13 @@ a {
   }
 }
 
-
 #contact {
   background-color:#f4f4f7;
-}
-
-#hardware {
-  img {
-    //max-width: 200px;
-  }
 }
 
 .row-wrapper {
   border-bottom: 1px solid rgba(242, 99, 30, 0.47);
 
-  //delete this
   .spacing {
     padding:2em;
   }
@@ -417,40 +387,16 @@ a {
 .hardware-wrapper {
   border-right: 1px solid rgba(242, 99, 30, 0.47);
 }
+//End of Partner Page
 
-form {
-  background-color: #FFF;
-  border-radius: 50px;
-  padding:2.5em;
-}
 
-textarea {
-  width: 100%;
-}
-
-.google-maps {
-        position: relative;
-        padding-bottom: 75%; // This is the aspect ratio
-        height: 0;
-        overflow: hidden;
-    }
-    .google-maps iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100% !important;
-        height: 100% !important;
-    }
-
+//Contact us Page
 #contactus {
-  //background-color: #F2631E;
   background: url("/img/contactbg.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  //background: linear-gradient(to bottom right,#F2631E,#BF2718);
-  //color: #FFF;
-  min-height:100vh; // ie doesnt support this
+  min-height:100vh;
   text-align:left;
   color: #FFFFFF;
 
@@ -459,47 +405,31 @@ textarea {
   }
 }
 
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-     /* IE10+ CSS styles go here */
-     #nav-bar {
-       background-color: #F2631E;
-     }
+.google-maps {
+    position: relative;
+    padding-bottom: 75%;
+    height: 0;
+    overflow: hidden;
+}
+.google-maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+//End of Contact Us
 
-     #contactus {
-       height:100vh;
-     }
-
-     .side-image {
-       height: 550px;
-       overflow:hidden;
-     }
-
-     .max-width {
-       width: 1200px;
-     }
-
-     .audience-font-awesome{
-       -ms-flex: 1;
-        -webkit-flex: 1;
-        flex: 1;
-     }
-
-     @media (max-width:750px) {
-       .side-image {
-         height: auto;
-       }
-
-     }
-
-     @media (max-width: 1200px) {
-       .max-width {
-         width: auto;
-       }
-     }
+//Success-Stories Page
+.company-container {
+  background-color: #F2631E;
+  transition: 0.4s all;
+  padding-top: 2em;
+    padding-bottom: 2em;
 }
 
-.ie #contactus {
-  height: 100vh;
+.company-container:hover {
+  background-color: #BF2718;
 }
 
 .success {
@@ -524,14 +454,14 @@ textarea {
 
   }
 }
+//End of Success-Stories
 
 //Bot navigation
 .bot-nav {
-  //background-color: #BF2718;
-  //background-color: #F2631E;
   background: linear-gradient(to bottom right, #F2631E, #BF2718);
-  color:white;
+  color:#FFFFFF;
   text-align:left;
+  overflow:auto;
   p {
     margin:0.5em auto;
   }
@@ -550,30 +480,17 @@ textarea {
       max-width: 50px;
     }
   }
+
+  a {
+    text-decoration:underline;
+  }
 }
 //Bot navigation end
 
-
-//css fade in practice
-// .come-in {
-//   transform: translateY(200px);
-//   animation: come-in 0.8s ease forwards;
-//   opacity: 0;
-// }
-// .come-in:nth-child(odd) {
-//   animation-duration: 1.3s; /* So they look staggered */
-// }
-//
-// @keyframes come-in {
-//   to { transform: translateX(0);
-//
-//   opacity:1;}
-//
-// }
-
-
-
 @media(max-width: 1600px) {
+  h1 {
+    font-size: 2.12em;
+  }
   .overflow-images-left{
     left:0;
   }
@@ -595,8 +512,6 @@ textarea {
 
 @media(max-width: 950px) {
   #nav-bar {
-    //background-color: rgba(31,31,31,0.82);
-    background-color: #F2631E;
     height: calc(310px - 242px);
     ul {
       padding: 0;
@@ -604,17 +519,13 @@ textarea {
       li {
         width: 100%;
         margin: 0;
-        //padding:1em;
         box-sizing: border-box;
-
-        //border-top: 2px solid #FFF;
       }
     }
 
     .change #nav-content{
-      //display: block !important;
-      //background-color: rgba(31,31,31,0.82);
       background-color: rgba(255, 99, 40, 0.95);
+      background-color: #F2631E;
       opacity: 1;
       transform: scaleY(1);
     }
@@ -626,17 +537,15 @@ textarea {
       margin: 0;
     }
 
-    .hamburger {
+    #hamburger {
       display: inline-block;
     }
 
     .portal {
-      // padding:0.7em;
       padding:1.2em 0.7em 0.7em 0.7em
     }
   }
 
-//change and delete?
   .max-width-1400 {
     box-sizing:border-box;
     padding-left:3em;
@@ -646,11 +555,28 @@ textarea {
 
 @media(max-width: 750px) {
   h1 {
-    font-size: 1.7em;
+    font-size: 1.4em;
   }
 
   h2 {
-    font-size: 1.2em;
+    font-size: 1em;
+  }
+
+  h3 {
+    font-size:1em;
+  }
+
+  h4 {
+    font-size: 1em;
+  }
+
+  p, li {
+    font-size:0.9em;
+  }
+
+  .disappear {
+    opacity: 0;
+    display: none !important;
   }
 
   .side-image {
@@ -695,8 +621,6 @@ textarea {
 
   .hardware-wrapper {
     border-right: none;
-    //border-bottom: 1px solid rgba(242, 99, 30, 0.47);
-
   }
 
   .slide {
@@ -706,5 +630,42 @@ textarea {
   .max-width-1400 {
     padding: 0;
   }
+}
 
+//Styles only applies to Internet Explorers
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+     #nav-bar {
+       background-color: #F2631E;
+     }
+
+     #contactus {
+       height:100vh;
+     }
+
+     .side-image {
+       height: 550px;
+       overflow:hidden;
+     }
+
+     .max-width {
+       width: 1200px;
+     }
+
+     .font-awesome{
+       -ms-flex: 1;
+        -webkit-flex: 1;
+        flex: 1;
+     }
+
+     @media (max-width:750px) {
+       .side-image {
+         height: auto;
+       }
+     }
+
+     @media (max-width: 1200px) {
+       .max-width {
+         width: auto;
+       }
+     }
 }
