@@ -90,7 +90,7 @@ a {
       text-decoration:none;
       a {
           display:block;
-          padding:1em 1.5em;
+          padding:0.5em 1.5em;
             transition: all 0.4s ease;
       }
 
@@ -189,6 +189,32 @@ a {
   h3, h4 {
     margin:0;
   }
+}
+
+.button-contact:hover, .login-button:hover {
+  background-color: #FFFFFF;
+  color: #F2631E;
+}
+
+.button-contact {
+  padding: 12.5px 33px;
+  border-radius: 10px;
+  display:inline-block;
+  text-decoration: none;
+  border: 2px solid #FFF;
+  transition: all 0.4s;
+  h3, h4 {
+    margin:0;
+  }
+  margin: 0 1em;
+}
+
+.login-button {
+  border-radius: 10px;
+  display:inline-block;
+  text-decoration: none;
+  border: 2px solid #FFF;
+  transition: all 0.4s;
 }
 
 //Flex mainly for vertical aligning
@@ -325,6 +351,11 @@ a {
 //Product Page
 
 //Side image - beyond max width
+
+#product-features {
+  background-color:#f4f4f7;
+  padding:1em 0;
+}
 .overflow-images-left {
   position: absolute;
   background-image: url('../img/mockups/understand2.png');
@@ -360,6 +391,11 @@ a {
   }
 }
 
+#install {
+  background-color:#f4f4f7;
+}
+
+
 #buy {
   padding: 5em 0;
   background:#f4f4f7;
@@ -370,13 +406,27 @@ a {
 //Partner Page
 
 #partnerfaq {
+  background-color:#f4f4f7;
   p, h4 {
     text-align:left;
   }
 }
 
-#contact {
+#partner-features {
   background-color:#f4f4f7;
+  h4 {
+    margin-bottom: 0;
+  }
+}
+
+#partner-testimonials {
+  img {
+    width: auto;
+  }
+}
+
+#contact {
+
 }
 
 .row-wrapper {
@@ -406,6 +456,67 @@ a {
   img {
     max-width: 150px;
   }
+}
+
+#precontactus {
+  background: url("../img/contactbg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height:100vh;
+  text-align:center;
+  color: #FFFFFF;
+
+  .font-awesome-increase {
+    font-size: 10em;
+  }
+}
+
+.input-form {
+  padding:1em;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.15);
+
+  h4 {
+    text-align:center;
+  }
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+label {
+  font-family: 'Montserrat', sans-serif;
+}
+input {
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: transparent;
+  color: #FFFFFF;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.4s all;
+  border: 2px solid #FFF;
+}
+
+input[type=submit]:hover {
+  background-color:#FFFFFF;
+  color: #F2631E;
 }
 
 .google-maps {
@@ -520,11 +631,12 @@ a {
 
   #contactus {
     padding-top: 4em;
+    padding-bottom: 4em;
   }
 
 }
 
-@media(max-width: 950px) {
+@media(max-width: 1050px) {
   #nav-bar {
     height: calc(310px - 242px);
     ul {
@@ -534,7 +646,14 @@ a {
         width: 100%;
         margin: 0;
         box-sizing: border-box;
+        a {
+          padding:1em 1.5em;
+        }
       }
+    }
+
+    .login-button {
+      border: none;
     }
 
     .change #nav-content{
@@ -658,7 +777,11 @@ a {
        background-color: #F2631E;
      }
 
-     #contactus {
+     #first-screen {
+       height: 100vh;
+     }
+
+     #contactus, #precontactus {
        height:100vh;
      }
 
@@ -671,7 +794,7 @@ a {
        width: 1200px;
      }
 
-     .font-awesome{
+     .font-awesome, .audience-font-awesome{
        -ms-flex: 1;
         -webkit-flex: 1;
         flex: 1;
