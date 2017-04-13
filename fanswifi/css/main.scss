@@ -117,6 +117,9 @@ a {
   }
 }
 
+.typeform-wrapper.popup img {
+  width: auto;
+}
 //Hamburger Menu
 #hamburger {
   display: none;
@@ -225,21 +228,21 @@ a {
 }
 
 #product-screen {
-  background-image: url('img/producttop.jpg');
+  background-image: url('../img/producttop.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 #partner-screen {
-  background-image: url('img/partnertop.jpg');
+  background-image: url('../img/partnertop.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 #success-screen {
-  background-image: url('img/successtop.jpg');
+  background-image: url('../img/successtop.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -252,11 +255,11 @@ a {
 
 //First screen
 #first-screen{
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 
-  background-image: url("img/index_page.jpg");
+  background-image: url("../img/index_page.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -279,16 +282,16 @@ a {
 //Video Button
 #video-button {
   width: 100px;
-  margin:0 auto;
+  margin:1em auto;
   img{
-    max-width:100px;
+    max-width:80px;
   }
 }
 
 #audience {
   overflow:auto;
   color: #FFF;
-  background-image: url("img/audience/audience.jpg");
+  background-image: url("../img/audience/audience.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -324,7 +327,7 @@ a {
 //Side image - beyond max width
 .overflow-images-left {
   position: absolute;
-  background-image: url('img/mockups/understand2.png');
+  background-image: url('../img/mockups/understand2.png');
   left: 3%;
   width: 50%;
   height: 100%;
@@ -335,7 +338,7 @@ a {
 
 .overflow-images-right {
   position: absolute;
-  background-image: url('img/mockups/control2.png');
+  background-image: url('../img/mockups/control2.png');
   right: 0;
   width: 50%;
   height: 100%;
@@ -346,7 +349,7 @@ a {
 }
 
 .side-image {
-  margin: 3em 0;
+  margin: 2em 0;
   position: relative;
   padding: 0;
   overflow: hidden;
@@ -392,7 +395,7 @@ a {
 
 //Contact us Page
 #contactus {
-  background: url("/img/contactbg.jpg");
+  background: url("../img/contactbg.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -426,6 +429,10 @@ a {
   transition: 0.4s all;
   padding-top: 2em;
     padding-bottom: 2em;
+
+    img {
+      width: auto;
+    }
 }
 
 .company-container:hover {
@@ -500,6 +507,12 @@ a {
   }
 }
 
+@media(max-width:1300px) {
+  .side-image {
+    min-height:350px;
+  }
+}
+
 @media(max-width: 1000px) {
   h4{
     font-size: 1em;
@@ -508,6 +521,7 @@ a {
   #contactus {
     padding-top: 4em;
   }
+
 }
 
 @media(max-width: 950px) {
@@ -581,17 +595,18 @@ a {
 
   .side-image {
     flex-direction: column;
+    margin:0;
 
     .overflow-images-left{
       position: static;
       width: 100%;
-      height: 350px;
+      height: 275px;
     }
 
     .overflow-images-right{
       position: static;
       width: 100%;
-      height: 350px;
+      height: 275px;
     }
   }
 
@@ -611,6 +626,7 @@ a {
       flex-direction:column;
     }
   }
+
 }
 
 
@@ -624,10 +640,14 @@ a {
   }
 
   .slide {
-    padding: 3em 1em;
+    padding: 2.5em 1em;
   }
 
   .max-width-1400 {
+    padding: 0;
+  }
+
+  #audience .spacing {
     padding: 0;
   }
 }
@@ -643,7 +663,7 @@ a {
      }
 
      .side-image {
-       height: 550px;
+       height: 450px;
        overflow:hidden;
      }
 
