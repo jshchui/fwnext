@@ -100,6 +100,35 @@ a {
 
   #nav-content {
     transition: all 0.4s;
+
+    .expander {
+      display: none;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #FFF;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+      text-align: left;
+
+
+        a {
+          color: #000;
+          padding: 16px 22px;
+        }
+
+        a:hover {
+          color: #FFF;
+          background-color: #F2631E;
+        }
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
   }
 
 .logo {
@@ -124,15 +153,15 @@ a {
 #hamburger {
   display: none;
   cursor: pointer;
-  padding: 0.9em 1em;
+  padding: 0.85em 1em;
   float:right;
 }
 
 .bar1, .bar2, .bar3 {
   width: 35px;
-  height: 5px;
+  height: 3px;
   background-color: #FFF;
-  margin: 6px 0;
+  margin: 8px 0;
   transition: 0.4s;
 }
 
@@ -191,7 +220,7 @@ a {
   }
 }
 
-.button-contact:hover, .login-button:hover {
+.button-contact:hover, .important-button:hover {
   background-color: #FFFFFF;
   color: #F2631E;
 }
@@ -206,15 +235,16 @@ a {
   h3, h4 {
     margin:0;
   }
-  margin: 0 1em;
+  margin: 0.5em 1em;
 }
 
-.login-button {
+.important-button {
   border-radius: 10px;
   display:inline-block;
   text-decoration: none;
   border: 2px solid #FFF;
   transition: all 0.4s;
+  margin-left:1em;
 }
 
 //Flex mainly for vertical aligning
@@ -230,6 +260,10 @@ a {
 
 .left-content {
   text-align: left;
+}
+
+.center-content {
+  text-align:center;
 }
 
 .steps { //to make sure text wrapping doesnt change height of other things
@@ -269,6 +303,13 @@ a {
 
 #success-screen {
   background-image: url('../img/successtop.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#contactus-top {
+  background-image: url('../img/contactbg.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -345,6 +386,10 @@ a {
   img {
     max-width: 172px;
   }
+}
+
+#mediacoverage {
+  background-color: #f4f4f7;
 }
 //end of first slide
 
@@ -430,31 +475,37 @@ a {
 }
 
 .row-wrapper {
-  border-bottom: 1px solid rgba(242, 99, 30, 0.47);
+
+  img {
+   max-width:230px;
+  }
 
   .spacing {
     padding:2em;
   }
 }
-
-.hardware-wrapper {
-  border-right: 1px solid rgba(242, 99, 30, 0.47);
-}
 //End of Partner Page
 
 
 //Contact us Page
+#contactus-top {
+
+}
 #contactus {
-  background: url("../img/contactbg.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height:100vh;
+  // background: url("../img/contactbg.jpg");
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // background-size:cover;
+  //min-height:100vh;
   text-align:left;
-  color: #FFFFFF;
+  //color: #FFFFFF;
+
+  padding-top: 4em;
+  padding-bottom: 4em;
+
 
   img {
-    max-width: 150px;
+    max-width: 350px;
   }
 }
 
@@ -473,9 +524,10 @@ a {
 }
 
 .input-form {
+  margin-right: 2em;
   padding:1em;
   border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.15);
+  //background-color: rgba(0, 0, 0, 0.15);
 
   h4 {
     text-align:center;
@@ -595,12 +647,16 @@ input[type=submit]:hover {
 
   .social {
     img {
-      max-width: 50px;
+      max-width: 40px;
     }
   }
-
   a {
-    text-decoration:underline;
+    transition: 0.4s all;
+  }
+
+  a:hover {
+    color: #ffa26a;
+    //text-decoration:underline;
   }
 }
 //Bot navigation end
@@ -629,20 +685,21 @@ input[type=submit]:hover {
     font-size: 1em;
   }
 
-  #contactus {
-    padding-top: 4em;
-    padding-bottom: 4em;
-  }
-
 }
 
-@media(max-width: 1050px) {
+@media(max-width: 1150px) {
+  .row-wrapper {
+    .spacing {
+      padding:1em;
+    }
+  }
   #nav-bar {
     height: calc(310px - 242px);
     ul {
       padding: 0;
       width: 100%;
       li {
+        text-align:left;
         width: 100%;
         margin: 0;
         box-sizing: border-box;
@@ -652,12 +709,19 @@ input[type=submit]:hover {
       }
     }
 
-    .login-button {
+
+
+    .important-button {
       border: none;
+      margin-left:0;
+    }
+
+    .important-button:hover {
+      background-color: #F2631E;
     }
 
     .change #nav-content{
-      background-color: rgba(255, 99, 40, 0.95);
+      //background-color: rgba(255, 99, 40, 0.95);
       background-color: #F2631E;
       opacity: 1;
       transform: scaleY(1);
@@ -668,6 +732,71 @@ input[type=submit]:hover {
       transform-origin: top;
       transform:scaleY(0);
       margin: 0;
+
+      .dropdown {
+        position: relative;
+        .expander {
+          position: absolute;
+          top:0;
+          right:0;
+          width: 50px;
+          height:54px;
+          display: block;
+          float:right;
+          cursor: pointer;
+          background-color: #ff8246;
+        }
+
+        .expander::before {
+          position: absolute;
+          top: 23px;
+          right: 22px;
+          display: block;
+          width: 2px;
+          height: 8px;
+          background: #FFF;
+          content: '';
+        }
+
+        .expander::after {
+          position: absolute;
+          top: 26px;
+          right: 19px;
+          width: 8px;
+          height: 2px;
+          display: block;
+          background: #FFF;
+          content: '';
+        }
+
+        .show {
+          transition: 0.4s all;
+          display:block;
+          position:inherit;
+
+        //  visibility: visible;
+        //opacity: 1;
+        //position: inherit;
+        }
+
+
+        .dropdown-content {
+          //position: absolute;
+          box-shadow: none;
+        //  visibility : hidden;
+
+
+        //opacity: 0;
+           a {
+             padding-left: 2em;
+           }
+        }
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: none;
+
+      }
     }
 
     #hamburger {
@@ -712,6 +841,7 @@ input[type=submit]:hover {
     display: none !important;
   }
 
+
   .side-image {
     flex-direction: column;
     margin:0;
@@ -734,7 +864,7 @@ input[type=submit]:hover {
     margin: 0;
   }
 
-  #install, #partner-testimonials, #partner-features {
+  #install, #partner-testimonials, #partner-features, #precontactus {
     .flex {
       flex-direction: column;
     }
@@ -754,9 +884,9 @@ input[type=submit]:hover {
     flex-direction: column;
   }
 
-  .hardware-wrapper {
-    border-right: none;
-  }
+  // .hardware-wrapper {
+  //   border-right: none;
+  // }
 
   .slide {
     padding: 2.5em 1em;
@@ -781,7 +911,7 @@ input[type=submit]:hover {
        height: 100vh;
      }
 
-     #contactus, #precontactus {
+     #precontactus {
        height:100vh;
      }
 
