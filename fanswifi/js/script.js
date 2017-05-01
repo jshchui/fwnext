@@ -4,6 +4,7 @@ $(document).ready(function() {
   var open = false;
   var prevScroll = 0;
   var currentScroll =0;
+  var dropdown = false;
   $('#hamburger').click(function(e) {
     $('#hamburger').parent().toggleClass('change');
     ///$('#nav-bar').parent().toggleClass('change');
@@ -42,14 +43,28 @@ $(document).ready(function() {
             open = false;
           }
         }
-        console.log('toggle menu');
+        //console.log('toggle menu');
         //dropdown = false;
       }
     }
   });
 
   $('.expander').click(function(e)  {
-    $('.dropdown-content').toggleClass('show');
+     $(this).next('.dropdown-content').slideToggle();
+     $(this).children().toggle();
+     //$(this).children().toggleClass('show');
+    ////$('.dropdown-content').toggleClass('show');
+    // if(dropdown == true) {
+    //   //$('.dropdown-content').slideUp();
+    //   $(this).next('.dropdown-content').slideUp();
+    //   console.log("slideup");
+    //   dropdown = false;
+    // } else {
+    //   $(this).next('.dropdown-content').slideDown();
+    //   console.log("slidedown");
+    //   //$('.dropdown-content').slideDown();
+    //   dropdown = true;
+    // }
   });
 
 

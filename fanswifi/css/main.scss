@@ -747,7 +747,7 @@ input[type=submit]:hover {
           background-color: #ff8246;
         }
 
-        .expander::before {
+        .slash {
           position: absolute;
           top: 23px;
           right: 22px;
@@ -770,19 +770,20 @@ input[type=submit]:hover {
         }
 
         .show {
-          transition: 0.4s all;
-          display:block;
-          position:inherit;
-
-        //  visibility: visible;
-        //opacity: 1;
-        //position: inherit;
+          //probablyu not needeed anymore
+           transition: 0.4s all;
+          // display:block;
+          // position:inherit;
+          transform: rotate(90deg);
+          //display: none;
         }
 
 
         .dropdown-content {
           //position: absolute;
+          position:inherit;
           box-shadow: none;
+          //display: none;
         //  visibility : hidden;
 
 
